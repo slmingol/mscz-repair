@@ -27,16 +27,16 @@ The fix is to strip the stale excerpts so MuseScore loads the score clean, then 
 
 ## Install
 
-**pip (installs the `mscz-repair` command globally):**
+**From GitHub (installs the `mscz-repair` command globally):**
 
 ```sh
-pip install mscz-repair
+pip install git+https://github.com/slmingol/mscz-repair.git
 ```
 
 **Or run directly without installing:**
 
 ```sh
-curl -O https://raw.githubusercontent.com/smingolelli/mscz-repair/main/mscz_repair.py
+curl -O https://raw.githubusercontent.com/slmingol/mscz-repair/main/mscz_repair.py
 python3 mscz_repair.py <file>.mscz
 ```
 
