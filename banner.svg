@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 240" width="1200" height="240">
+  <style>
+    :root {
+      --bg: #0C0F14;
+      --staff: rgba(255,255,255,0.06);
+      --title: #E4ECF4;
+      --accent: #E8B84B;
+      --sub: #4D6070;
+      --bar: #E8B84B;
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #F0F4F9;
+        --staff: rgba(0,0,0,0.09);
+        --title: #0C0F14;
+        --accent: #B5892A;
+        --sub: #5C6E82;
+        --bar: #B5892A;
+      }
+    }
+  </style>
+
+  <!-- Background -->
+  <rect width="1200" height="240" fill="var(--bg)"/>
+
+  <!-- Staff lines — 5 lines, 14px spacing, centered at y=116 -->
+  <line x1="0" y1="88"  x2="1200" y2="88"  stroke="var(--staff)" stroke-width="1.5"/>
+  <line x1="0" y1="102" x2="1200" y2="102" stroke="var(--staff)" stroke-width="1.5"/>
+  <line x1="0" y1="116" x2="1200" y2="116" stroke="var(--staff)" stroke-width="1.5"/>
+  <line x1="0" y1="130" x2="1200" y2="130" stroke="var(--staff)" stroke-width="1.5"/>
+  <line x1="0" y1="144" x2="1200" y2="144" stroke="var(--staff)" stroke-width="1.5"/>
+
+  <!-- Opening barline (amber) -->
+  <line x1="56" y1="83" x2="56" y2="149" stroke="var(--bar)" stroke-width="2.5"/>
+
+  <!-- Final barline: thin + thick -->
+  <line x1="1134" y1="83" x2="1134" y2="149" stroke="var(--bar)" stroke-width="1.5"/>
+  <line x1="1141" y1="83" x2="1141" y2="149" stroke="var(--bar)" stroke-width="5"/>
+
+  <!-- Title -->
+  <text y="186" text-anchor="middle" x="600"
+        font-family="'SF Mono', Menlo, Monaco, Consolas, monospace"
+        font-weight="600" font-size="52" letter-spacing="-0.5">
+    <tspan fill="var(--title)">mscz</tspan><tspan fill="var(--accent)">-repair</tspan>
+  </text>
+
+  <!-- Tagline -->
+  <text x="600" y="216" text-anchor="middle"
+        font-family="-apple-system, 'Segoe UI', Helvetica Neue, sans-serif"
+        font-size="17" fill="var(--sub)" letter-spacing="0.2">
+    Fix stale MuseScore part excerpts that prevent loading
+  </text>
+</svg>
