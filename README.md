@@ -42,13 +42,17 @@ curl -o mscz_repair https://raw.githubusercontent.com/slmingol/mscz-repair/main/
 
 ## Usage
 
+**If installed via pip** (`mscz-repair`):
+
 ```sh
 mscz-repair broken.mscz                  # writes broken_fixed.mscz alongside the original
 mscz-repair broken.mscz -o repaired.mscz # custom output path
 mscz-repair broken.mscz --in-place       # overwrite in place
 ```
 
-## Example
+**If run directly** (`./mscz_repair`): same flags, just substitute `./mscz_repair` for `mscz-repair`.
+
+## Example (direct download)
 
 ```
 # start with just the broken file
