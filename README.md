@@ -36,21 +36,17 @@ pip install git+https://github.com/slmingol/mscz-repair.git
 **Or run directly without installing:**
 
 ```sh
-curl -o mscz_repair https://raw.githubusercontent.com/slmingol/mscz-repair/main/mscz_repair.py && chmod +x mscz_repair
-./mscz_repair <file>.mscz
+curl -o mscz-repair https://raw.githubusercontent.com/slmingol/mscz-repair/main/mscz_repair.py && chmod +x mscz-repair
+./mscz-repair <file>.mscz
 ```
 
 ## Usage
-
-**If installed via pip** (`mscz-repair`):
 
 ```sh
 mscz-repair broken.mscz                  # writes broken_fixed.mscz alongside the original
 mscz-repair broken.mscz -o repaired.mscz # custom output path
 mscz-repair broken.mscz --in-place       # overwrite in place
 ```
-
-**If run directly** (`./mscz_repair`): same flags, just substitute `./mscz_repair` for `mscz-repair`.
 
 Output files are never silently overwritten. If the destination already exists, the tool exits with an error and prompts you to pick a different path or use `--in-place`.
 
@@ -63,13 +59,13 @@ total 6124
 -rw-r--r-- 1 user staff 6270602 Jul 26 19:01 'symphony_no5_corrupt.mscz'
 
 # download and make executable
-$ curl https://raw.githubusercontent.com/slmingol/mscz-repair/main/mscz_repair.py -o mscz_repair && chmod +x mscz_repair
+$ curl https://raw.githubusercontent.com/slmingol/mscz-repair/main/mscz_repair.py -o mscz-repair && chmod +x mscz-repair
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                    Dload  Upload   Total   Spent    Left  Speed
 100  4234  100  4234    0     0  47802      0 --:--:-- --:--:-- --:--:-- 48113
 
 # fix the corrupted file
-$ ./mscz_repair symphony_no5_corrupt.mscz
+$ ./mscz-repair symphony_no5_corrupt.mscz
 Removed 128 stale excerpt entries.
 Written: symphony_no5_corrupt_fixed.mscz
 
@@ -78,7 +74,7 @@ $ ls -l
 total 8020
 -rw-r--r-- 1 user staff 1932322 Jul 26 19:06 'symphony_no5_corrupt_fixed.mscz'
 -rw-r--r-- 1 user staff 6270602 Jul 26 19:01 'symphony_no5_corrupt.mscz'
--rwxr-xr-x 1 user staff    4234 Jul 26 19:04  mscz_repair
+-rwxr-xr-x 1 user staff    4234 Jul 26 19:04  mscz-repair
 ```
 
 ## How it works
