@@ -52,6 +52,8 @@ mscz-repair broken.mscz --in-place       # overwrite in place
 
 **If run directly** (`./mscz_repair`): same flags, just substitute `./mscz_repair` for `mscz-repair`.
 
+Output files are never silently overwritten. If the destination already exists, the tool exits with an error and prompts you to pick a different path or use `--in-place`.
+
 ## Example (direct download)
 
 ```
