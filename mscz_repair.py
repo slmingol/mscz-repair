@@ -107,6 +107,12 @@ def main():
         base, ext = os.path.splitext(input_path)
         output_path = base + "_fixed" + ext
 
+    if not args.in_place and os.path.exists(output_path):
+        print(f"error: output already exists: {output_path}\n"
+              f"  use -o to specify a different path, or --in-place to overwrite the input",
+              file=sys.stderr)
+        sys.exit(1)
+
     try:
         removed = repair(input_path, output_path)
     except Exception as e:
